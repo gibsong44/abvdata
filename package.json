@@ -1,0 +1,1 @@
+{ "name": "abvdata", "version": "0.1.0", "private": true, "scripts": { "build": "echo "No build step required for Cloudflare Worker; modify if you need bundling"", "publish": "wrangler publish" }, "devDependencies": { "wrangler": "^3.12.0" } }
