@@ -8,7 +8,21 @@ main = "src/index.js"
 compatibility_date = "2026-07-10"
 type = "javascript"
 
-# Optional: enable workers_dev for preview deployments
-# workers_dev = true
+# Enable workers_dev for preview deployments (uncomment to use the workers.dev preview URL)
+workers_dev = true
 
+# Example: To deploy to a custom domain, add routes and zone_id in an env:
+# [env.production]
+# account_id = "d9df14ce797a5fe5307782ba25ac24e9"
+# zone_id = "your_zone_id_here"
+# route = "example.com/*"
+#
+# To add KV namespaces:
+# [[kv_namespaces]]
+# binding = "MY_KV"
+# id = "your_kv_namespace_id_here"
+#
+# To add secrets:
+# Use `wrangler secret put NAME` or add environment variables via your CI.
+#
 # Add any additional publish settings below, e.g. routes, env vars, or build settings.
