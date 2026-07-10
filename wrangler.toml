@@ -1,0 +1,14 @@
+name = "abvdata"
+main = "src/index.js"
+compatibility_date = "2026-07-10"
+
+# If this is a Pages site, [site] with a bucket (output dir) tells Wrangler where
+# the built files live. If you're deploying a Worker instead, remove or adjust
+# the [site] table as appropriate.
+[site]
+bucket = "./public"
+
+# IMPORTANT: Add your account_id and any publish settings before publishing.
+# Example:
+# account_id = "your_account_id_here"
+# type = "javascript" # or "webpack", "rust", etc.
