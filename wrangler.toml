@@ -1,14 +1,14 @@
+# Wrangler configuration for Cloudflare Worker
+# NOTE: This is configured for a Worker (not Pages). The [site] table was
+# removed because Workers don't use site buckets.
+
+account_id = "d9df14ce797a5fe5307782ba25ac24e9"
 name = "abvdata"
 main = "src/index.js"
 compatibility_date = "2026-07-10"
+type = "javascript"
 
-# If this is a Pages site, [site] with a bucket (output dir) tells Wrangler where
-# the built files live. If you're deploying a Worker instead, remove or adjust
-# the [site] table as appropriate.
-[site]
-bucket = "./public"
+# Optional: enable workers_dev for preview deployments
+# workers_dev = true
 
-# IMPORTANT: Add your account_id and any publish settings before publishing.
-# Example:
-# account_id = "your_account_id_here"
-# type = "javascript" # or "webpack", "rust", etc.
+# Add any additional publish settings below, e.g. routes, env vars, or build settings.
