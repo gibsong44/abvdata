@@ -2,9 +2,10 @@
 # NOTE: This is configured for a Worker (not Pages). The [site] table was
 # removed because Workers don't use site buckets.
 
-account_id = "d9df14ce797a5fe5307782ba25ac24e9"
+# account_id is intentionally left empty so CI can provide CF_ACCOUNT_ID via secrets
+account_id = ""
 name = "abvdata"
-main = "src/index.js"
+main = "dist/worker.js"
 compatibility_date = "2026-07-10"
 type = "javascript"
 
@@ -13,7 +14,7 @@ workers_dev = true
 
 # Example: To deploy to a custom domain, add routes and zone_id in an env:
 # [env.production]
-# account_id = "d9df14ce797a5fe5307782ba25ac24e9"
+# account_id = "your_account_id_here"
 # zone_id = "your_zone_id_here"
 # route = "example.com/*"
 #
@@ -21,8 +22,5 @@ workers_dev = true
 # [[kv_namespaces]]
 # binding = "MY_KV"
 # id = "your_kv_namespace_id_here"
-#
-# To add secrets:
-# Use `wrangler secret put NAME` or add environment variables via your CI.
 #
 # Add any additional publish settings below, e.g. routes, env vars, or build settings.
